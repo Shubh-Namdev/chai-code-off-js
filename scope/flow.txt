@@ -1,0 +1,32 @@
+const val1 = 5;
+const val2 = 10;
+
+function add(val1, val2) {
+    let result = val1 + val2;
+    return result;
+}
+
+let result1 = add(val1,val2);
+let result2 = add(10,4);
+
+
+//JS program execution flow
+
+Global context will be created { this}.
+
+[
+    Memory creation phase -:
+    val1 = undefined;  val2 = undefined; add = function(), result1 = undefined; result2 = undefined;
+
+    Execution phase -:
+    let result1 = add(val1,val2); ----> 
+  
+    variabele env will be created and will be over once done
+      [
+        Memory creation phase -:
+        val1 = undefined;  val2 = undefined; result = undefined;
+        Execution phase -:
+        result = 15;
+      ]
+]
+
