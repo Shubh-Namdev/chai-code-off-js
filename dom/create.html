@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div id="container">
+        <h1 class="heading">Some heading</h1>
+        <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis natus. Et ut mollitia, animi reprehenderit ducimus in reiciendis blanditiis, sit dolor ipsa voluptas necessitatibus labore accusantium, exercitationem sint porro.</p>
+        <div id="item">
+            <div class="list-item">One</div>
+            <div class="list-item">Two</div>
+            <div class="list-item">Three</div>
+            <div class="list-item">Four</div>
+        </div>
+    </div>
+</body>
+<script>
+    const firstHead = document.querySelector('.heading');
+    firstHead.textContent = 'Create Heading';
+    firstHead.style.backgroundColor = 'green';
+
+    const items = document.getElementsByClassName('list-item');
+    //console.log(items);
+    
+    const allItems = document.querySelectorAll('.list-item');
+    //console.log(allItems);
+
+    const itemContainer = document.querySelector('#item');
+    //console.log(itemContainer);
+    //console.log(itemContainer.children);
+
+    for (let index = 0; index < itemContainer.children.length; index++) {
+        //console.log(itemContainer.children[index]);   
+    }
+
+    // console.log(itemContainer.firstElementChild);
+    // console.log(itemContainer.lastElementChild);
+    
+    const firstOne = document.querySelector('.list-item');
+    // console.log(firstOne);
+    // console.log(firstOne.parentElement);
+    
+    const totalCount = document.createElement('div');
+    totalCount.id = Math.round(Math.random()*10 + 1);
+    totalCount.className = 'total-count';
+    totalCount.setAttribute('title','any')
+    totalCount.style.fontSize = '40px';
+    const textNode = document.createTextNode("Total amount")
+    totalCount.appendChild(textNode);
+
+    document.getElementById('container').appendChild(totalCount);
+
+</script>
+</html>
