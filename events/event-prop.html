@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div class="container">
+        <ul id="images">
+            <li><img id="lake" width="300px" src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg"/></li>
+            <li><img id="waterfall" width="300px" src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Best-Nature-Full-HD-Images-For-Desktop.jpg"/></li>
+            <li><img id="forest" width="300px" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Background-Beautiful-Nature-Images-HD.jpg"/></li>
+            <li><img id="mountain" width="300px" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg"/></li>
+            <li><img id="snow" width="300px" src="https://photographylife.com/wp-content/uploads/2014/09/Nikon-D750-Image-Samples-2.jpg"/></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    /*
+    document.getElementById('lake').onclick = function() {
+        alert('This is a lake');
+    }
+
+    document.querySelector('#lake').addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log("list element is lake");
+    })
+
+    document.querySelector('#images').addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log("this is ul");
+    })
+
+    document.querySelector('.container').addEventListener('click', (e) => {
+        console.log("this is container")
+    })
+    */
+
+   document.querySelector('#images').addEventListener('click' , (e) => {
+
+        if ( e.target.tagName === "IMG") {
+            let targetElem = e.target.parentNode;
+            targetElem.remove();
+        }
+        //targetElem.parentNode.removeChild(targetElem);
+   })
+</script>
+</html>
