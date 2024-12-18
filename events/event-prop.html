@@ -20,32 +20,24 @@
 </body>
 <script>
     /*
-    document.getElementById('lake').onclick = function() {
-        alert('This is a lake');
+    function helloWorld() {
+        console.log("This is an event");
     }
 
-    document.querySelector('#lake').addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log("list element is lake");
-    })
+   document.getElementById('lake').onclick = function(e) {
+    console.log("This is an event");
+   }
+   */
 
-    document.querySelector('#images').addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log("this is ul");
-    })
+  document.querySelector('#images').addEventListener('click', (e) => {
+    console.log("This is ul event");
+  })
 
-    document.querySelector('.container').addEventListener('click', (e) => {
-        console.log("this is container")
-    })
-    */
+  document.querySelector('#lake').addEventListener('click', (e) => {
+    e.stopPropagation();
+    console.log("This is an event");
+  })
 
-   document.querySelector('#images').addEventListener('click' , (e) => {
 
-        if ( e.target.tagName === "IMG") {
-            let targetElem = e.target.parentNode;
-            targetElem.remove();
-        }
-        //targetElem.parentNode.removeChild(targetElem);
-   })
 </script>
 </html>
